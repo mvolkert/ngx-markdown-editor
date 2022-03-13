@@ -4,11 +4,7 @@
   "dest": "../../dist/ngx-markdown-editor",
   "lib": {
     "entryFile": "src/public-api.ts",
-    "umdModuleIds": {
-      "ngx-markdown": "ngxMarkdown",
-      "@mdefy/markdown-editor-core": "markdownEditorCore"
-    },
     "styleIncludePaths": ["../../node_modules/codemirror/lib/"]
   },
-  "whitelistedNonPeerDependencies": ["@mdefy/markdown-editor-core"]
+  "allowedNonPeerDependencies": ["@mdefy/markdown-editor-core"]
 }

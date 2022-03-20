@@ -55,6 +55,6 @@ jobs:
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
       - name: publish
-        run: npm publish
+        run: npm run publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.TOKEN_GITHUB_ACTION }}

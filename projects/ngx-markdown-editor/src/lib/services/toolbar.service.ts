@@ -268,8 +268,8 @@ export class ToolbarService {
         name: 'toggleRichTextMode',
         action: () => ngxMde.mde.toggleRichTextMode(),
         isActive: () => {
-          const mode = ngxMde.mde.cm.getOption('mode');
-          return mode === 'gfm' || mode.name === 'gfm';
+          const mode = ngxMde.mde.cm.getOption('mode') as any;
+          return mode === 'gfm' || mode?.name === 'gfm';
         },
         tooltip: 'Toggle Rich-Text Mode',
         icon: {
@@ -369,7 +369,7 @@ export class ToolbarService {
       // Effectively, only the `name` property is needed.
       {
         name: '|',
-        action: () => {},
+        action: () => { },
         tooltip: '',
         icon: { format: 'material', iconName: '' },
         disableOnPreview: false,

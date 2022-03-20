@@ -1,14 +1,15 @@
+import { EditorEventMap } from 'codemirror';
 import { Observable } from 'rxjs';
 
 /* eslint-disable @typescript-eslint/unified-signatures */
 export function fromCmEvent(
   cm: CodeMirror.Editor,
   eventName: 'change'
-): Observable<{ instance: CodeMirror.Editor; changeObj: CodeMirror.EditorChangeLinkedList }>;
+): Observable<{ instance: CodeMirror.Editor; changeObj: CodeMirror.EditorChange }>;
 export function fromCmEvent(
   cm: CodeMirror.Editor,
   eventName: 'changes'
-): Observable<{ instance: CodeMirror.Editor; changes: CodeMirror.EditorChangeLinkedList[] }>;
+): Observable<{ instance: CodeMirror.Editor; changes: CodeMirror.EditorChange[] }>;
 export function fromCmEvent(
   cm: CodeMirror.Editor,
   eventName: 'beforeChange'
@@ -92,7 +93,7 @@ export function fromCmEvent<K extends CodeMirror.DOMEvent & keyof DocumentAndEle
  * @param cm the `CodeMirror.Editor` instance of which the event shall be observed
  * @param eventName the name of a _CodeMirror_ event
  */
-export function fromCmEvent(cm: CodeMirror.Editor, eventName: string): Observable<any> {
+export function fromCmEvent(cm: CodeMirror.Editor, eventName: keyof EditorEventMap): Observable<any> {
   return new Observable((subscriber) => {
     let handler: () => void;
     switch (eventName) {

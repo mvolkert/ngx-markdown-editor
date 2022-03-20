@@ -11,14 +11,14 @@ import {
   SimpleChange,
   SimpleChanges,
   ViewChild,
-  ViewEncapsulation,
+  ViewEncapsulation
 } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { MatSelect } from '@angular/material/select';
 import { MatTooltipDefaultOptions, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material/tooltip';
 import { DomSanitizer } from '@angular/platform-browser';
 import { DEFAULT_OPTIONS, MarkdownEditor, MarkdownEditorOptions } from '@mdefy/markdown-editor-core';
-import { Editor, EditorChangeLinkedList } from 'codemirror';
+import { Editor, EditorChange } from 'codemirror';
 import { MarkdownComponent, MarkdownService } from 'ngx-markdown';
 import { Observable, Subject, Subscription } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -122,7 +122,7 @@ export class MarkdownEditorComponent implements OnInit, OnChanges, OnDestroy {
   /**
    * Emits when the editor's content changes.
    */
-  @Output() contentChange = new ObservableEmitter<{ instance: Editor; changes: EditorChangeLinkedList[] }>();
+  @Output() contentChange = new ObservableEmitter<{ instance: Editor; changes: EditorChange[] }>();
 
   /**
    * Emits when the editor's cursor is moved.
@@ -187,7 +187,7 @@ export class MarkdownEditorComponent implements OnInit, OnChanges, OnDestroy {
    */
   public focused = false;
 
-  private shortcutResetter = new Subject();
+  private shortcutResetter = new Subject<string>();
 
   @HostBinding('class.disabled') get disabledStyle() {
     return this.disabled;
@@ -286,7 +286,7 @@ export class MarkdownEditorComponent implements OnInit, OnChanges, OnDestroy {
    * @inheritdoc
    */
   ngOnDestroy() {
-    this.shortcutResetter.next();
+    this.shortcutResetter.next("");
     this.shortcutResetter.complete();
   }
 
@@ -477,7 +477,7 @@ export class MarkdownEditorComponent implements OnInit, OnChanges, OnDestroy {
       if (!defaultItem) {
         defaultItem = {
           name: '',
-          action: () => {},
+          action: () => { },
           tooltip: '',
           icon: { format: 'material', iconName: '' },
           disableOnPreview: false,
@@ -541,7 +541,7 @@ export class MarkdownEditorComponent implements OnInit, OnChanges, OnDestroy {
         });
     };
 
-    this.shortcutResetter.next();
+    this.shortcutResetter.next("");
     const shortcuts = {};
     const appliedNgxMdeShortcuts: { [name: string]: Subscription | undefined } = {};
 
@@ -694,7 +694,7 @@ export class MarkdownEditorComponent implements OnInit, OnChanges, OnDestroy {
     if (this.disabled) {
       this.showPreview = true;
       this.showSideBySidePreview = false;
-      this.shortcutResetter.next();
+      this.shortcutResetter.next("");
     } else {
       this.showPreview = false;
       this.showSideBySidePreview = false;

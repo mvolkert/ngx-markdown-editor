@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MarkdownEditorModule } from 'projects/ngx-markdown-editor/src/public-api';
+import { MarkdownEditorModule } from '@mvolkert/ngx-markdown-editor';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -8,4 +8,4 @@ import { AppComponent } from './app.component';
   imports: [BrowserModule, MarkdownEditorModule],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

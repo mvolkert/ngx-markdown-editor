@@ -7,15 +7,21 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "module": "es2020",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
-    "lib": ["es2018", "dom"],
+    "target": "es2017",
+    "module": "es2020",
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "allowSyntheticDefaultImports": true,
     "strictNullChecks": true,
     "paths": {
-      "ngx-markdown-editor": ["dist/ngx-markdown-editor/ngx-markdown-editor", "dist/ngx-markdown-editor"]
+      "ngx-markdown-editor": [
+        "dist/ngx-markdown-editor/ngx-markdown-editor",
+        "dist/ngx-markdown-editor"
+      ]
     }
   },
   "angularCompilerOptions": {

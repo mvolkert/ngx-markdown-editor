@@ -1,6 +1,6 @@
 {
   "name": "@mvolkert/ngx-markdown-editor",
-  "version": "13.2.7",
+  "version": "13.2.11",
   "description": "An Angular Markdown Editor in WYSIWYG style with extensive functionality, high customizability and an integrated material theme.",
   "author": {
     "name": "mvolkert",
@@ -32,9 +32,9 @@
   "main": "demo/demo.html",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 4201",
     "build": "ng build ngx-markdown-editor",
-    "build:prod": "ng build ngx-markdown-editor --prod && node scripts/postbuild.js",
+    "build:prod": "ng build ngx-markdown-editor --configuration production && node scripts/postbuild.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -55,10 +55,11 @@
     "@angular/platform-browser": "~13.2.6",
     "@angular/platform-browser-dynamic": "~13.2.6",
     "@angular/router": "~13.2.6",
-    "@mdefy/markdown-editor-core": "^1.0.0",
+    "@mdefy/markdown-editor-core": "1.0.1",
+    "@mvolkert/ngx-markdown-editor": "file:dist/ngx-markdown-editor",
     "ngx-markdown": "^13.1.0",
     "rxjs": "7.5.5",
-    "tslib": "^2.1.0",
+    "tslib": "^2.3.0",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {

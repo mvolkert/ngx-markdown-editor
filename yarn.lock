@@ -1452,14 +1452,21 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@mdefy/markdown-editor-core@^1.0.0":
-  "integrity" "sha512-B46XuMHe6yxB8WTvODk2PoQtKIapcZnKbcvDfhs+PiCuBU0MTHDBRnjBxIAOt+2kq9BuZP3AXQrIznLtQNLJ5A=="
-  "resolved" "https://registry.npmjs.org/@mdefy/markdown-editor-core/-/markdown-editor-core-1.0.0.tgz"
-  "version" "1.0.0"
+"@mdefy/markdown-editor-core@1.0.1":
+  "integrity" "sha512-7Bve8HEi/i9mbMzpv1BKIq1pG9AoNnJlkrcjEXi4X2Xw4a24agQxxgOviVK2OMonnD3Ljo44lo+Lmdea3tdAAA=="
+  "resolved" "https://registry.npmjs.org/@mdefy/markdown-editor-core/-/markdown-editor-core-1.0.1.tgz"
+  "version" "1.0.1"
   dependencies:
-    "codemirror" "^5.59.1"
-    "lodash-es" "^4.17.20"
+    "codemirror" "^5.59.4"
+    "lodash-es" "^4.17.21"
     "prettier" "^2.2.1"
+
+"@mvolkert/ngx-markdown-editor@file:dist/ngx-markdown-editor":
+  "resolved" "file:dist/ngx-markdown-editor"
+  "version" "13.2.11"
+  dependencies:
+    "@mdefy/markdown-editor-core" "1.0.1"
+    "tslib" "^2.3.0"
 
 "@ngtools/webpack@13.2.6":
   "integrity" "sha512-N8SvRV91+/57TcAfbghc0k0tKCukw/7KqbDaLPAQTGFekJ4xMGT3elMzOyBXTH3Hvp5HL8/hiBt2tG04qiMf+w=="
@@ -3260,10 +3267,10 @@
   "resolved" "https://registry.npmjs.org/clone/-/clone-1.0.4.tgz"
   "version" "1.0.4"
 
-"codemirror@^5.59.1":
-  "integrity" "sha512-/D5PcsKyzthtSy2NNKCyJi3b+htRkoKv3idswR/tR6UAvMNKA7SrmyZy6fOONJxSRs1JlUWEDAbxqfdArbK8iA=="
-  "resolved" "https://registry.npmjs.org/codemirror/-/codemirror-5.59.2.tgz"
-  "version" "5.59.2"
+"codemirror@^5.59.4":
+  "integrity" "sha512-SZM4Zq7XEC8Fhroqe3LxbEEX1zUPWH1wMr5zxiBuiUF64iYOUH/JI88v4tBag8MiBS8B8gRv8O1pPXGYXQ4ErA=="
+  "resolved" "https://registry.npmjs.org/codemirror/-/codemirror-5.65.2.tgz"
+  "version" "5.65.2"
 
 "collection-visit@^1.0.0":
   "integrity" "sha1-S8A3PBZLwykbTTaMgpzxqApZ3KA="
@@ -6497,10 +6504,10 @@
   dependencies:
     "p-locate" "^5.0.0"
 
-"lodash-es@^4.17.20":
-  "integrity" "sha512-JD1COMZsq8maT6mnuz1UMV0jvYD0E0aUsSOdrr1/nAG3dhqQXwRRgeW0cSqH1U43INKcqxaiVIQNOUDld7gRDA=="
-  "resolved" "https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.20.tgz"
-  "version" "4.17.20"
+"lodash-es@^4.17.21":
+  "integrity" "sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw=="
+  "resolved" "https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.21.tgz"
+  "version" "4.17.21"
 
 "lodash._reinterpolate@^3.0.0":
   "integrity" "sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0="
@@ -8818,7 +8825,7 @@
   dependencies:
     "tslib" "^1.9.0"
 
-"rxjs@^6.5.3 || ^7.4.0", "rxjs@^7.0.0", "rxjs@^7.2.0", "rxjs@7.5.5":
+"rxjs@^6.5.3 || ^7.4.0", "rxjs@^7.0.0", "rxjs@^7.2.0", "rxjs@^7.5.5", "rxjs@7.5.5":
   "integrity" "sha512-sy+H0pQofO95VDmFLzyaw9xNJU4KTRSwQIGM6+iG3SypAtCiLDzpeG8sJrNCWn2Up9km+KhkvTdbkrdy+yzZdw=="
   "resolved" "https://registry.npmjs.org/rxjs/-/rxjs-7.5.5.tgz"
   "version" "7.5.5"

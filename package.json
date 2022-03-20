@@ -43,7 +43,6 @@
     "deps:check": "ncu",
     "commit": "cz"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^13.2.6",
     "@angular/cdk": "^13.2.6",

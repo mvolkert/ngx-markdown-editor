@@ -1,6 +1,6 @@
 {
   "name": "@mvolkert/ngx-markdown-editor",
-  "version": "13.2.6",
+  "version": "13.2.7",
   "description": "An Angular Markdown Editor in WYSIWYG style with extensive functionality, high customizability and an integrated material theme.",
   "author": {
     "name": "mvolkert",
